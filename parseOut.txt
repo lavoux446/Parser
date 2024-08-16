@@ -1,0 +1,100 @@
+Matthew Messer, CSCI4200, Summer 2024, Parser
+********************************************************************************
+Parsing program
+********************************************************************************
+Next token is: IDENT, Next lexeme is program
+Enter <assign>
+ERROR - Second was not an ASSIGN_OP
+Exit <assign
+
+Parsing total = 205;
+********************************************************************************
+Next token is: IDENT, Next lexeme is total
+Enter <assign>
+Next token is: ASSIGN_OP, Next lexeme is =
+Next token is: INT_LIT, Next lexeme is 205
+Enter <expr>
+Enter <term>
+Enter <factor>
+Exit <factor>
+Exit <term>
+Exit <expr>
+Exit <assign
+
+Parsing Area = (length+width) *;
+********************************************************************************
+Next token is: IDENT, Next lexeme is Area
+Enter <assign>
+Next token is: ASSIGN_OP, Next lexeme is =
+Next token is: LEFT_PAREN, Next lexeme is (
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: IDENT, Next lexeme is length
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: ADD_OP, Next lexeme is +
+Exit <factor>
+Exit <term>
+Next token is: IDENT, Next lexeme is width
+Enter <term>
+Enter <factor>
+Next token is: RIGHT_PAREN, Next lexeme is )
+Exit <factor>
+Exit <term>
+Exit <expr>
+Next token is: MULT_OP, Next lexeme is *
+Exit <factor>
+Enter <factor>
+ERROR - Does not follow the parser grammar
+Exit <factor>
+Exit <term>
+Exit <expr>
+Exit <assign
+
+Parsing C = age - 15 * (D / 8)
+********************************************************************************
+Next token is: IDENT, Next lexeme is C
+Enter <assign>
+Next token is: ASSIGN_OP, Next lexeme is =
+Next token is: IDENT, Next lexeme is age
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: SUB_OP, Next lexeme is -
+Exit <factor>
+Exit <term>
+Next token is: INT_LIT, Next lexeme is 15
+Enter <term>
+Enter <factor>
+Next token is: MULT_OP, Next lexeme is *
+Exit <factor>
+Next token is: LEFT_PAREN, Next lexeme is (
+Enter <factor>
+Next token is: IDENT, Next lexeme is D
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: DIV_OP, Next lexeme is /
+Exit <factor>
+Next token is: INT_LIT, Next lexeme is 8
+Enter <factor>
+Next token is: RIGHT_PAREN, Next lexeme is )
+Exit <factor>
+Exit <term>
+Exit <expr>
+Exit <factor>
+Exit <term>
+Exit <expr>
+Exit <assign
+
+Parsing end
+********************************************************************************
+Next token is: IDENT, Next lexeme is end
+Enter <assign>
+ERROR - Second was not an ASSIGN_OP
+Exit <assign
+
+********************************************************************************
+Next token is: END_OF_FILE, Next lexeme is EOF
